@@ -1,0 +1,26 @@
+<div class="login-container" [ngClass]="{
+    'tu-aficionado-theme':tipo === 'tuaficionado',
+    'ciudad-bici-theme':tipo === 'ciudadbici',
+    'bici-trip-theme':tipo === 'bicitrip'
+    }">
+    <div class="background-header" [ngClass]="{
+    'tuaficionado':tipo === 'tuaficionado',
+    'ciudadbici':tipo === 'ciudadbici',
+    'bicitrip':tipo === 'bicitrip'
+    }"></div>
+    <mat-card class="login-card">
+        <h3 class="title">{{tipo }}</h3>
+        <form class="login-form">
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Usuario">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Contraseña" type="password">
+            </mat-form-field>
+        </form>
+        <div>
+            <button mat-raised-button color="primary" class="full-width">Iniciar Sesión</button>
+        </div>
+    </mat-card>
+    <div class="background-footer"></div>
+</div>

@@ -1,0 +1,47 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$default-app-primary: mat-palette($mat-blue, A400);
+$default-app-accent: mat-palette($mat-blue, A700);
+// The warn palette is optional (defaults to red).
+$default-app-warn: mat-palette($mat-red, A700);
+// Create the theme object (a Sass map containing all of the palettes).
+$default-app-theme: mat-light-theme($default-app-primary, $default-app-accent, $default-app-warn);
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($default-app-theme);
+.tu-aficionado-theme {
+    $tu-aficionado-primary: mat-palette($mat-blue, A400);
+    $tu-aficionado-accent: mat-palette($mat-blue, A700);
+    $tu-aficionado-warn: mat-palette($mat-red, A700);
+    $tu-aficionado-text: mat-palette($mat-grey, 900);
+    $tu-aficionado-theme: mat-light-theme($tu-aficionado-primary, $tu-aficionado-accent, $tu-aficionado-warn);
+    @include angular-material-theme($tu-aficionado-theme);
+}
+
+.ciudad-bici-theme {
+    $ciudad-bici-primary: mat-palette($mat-deep-purple, A400);
+    $ciudad-bici-accent: mat-palette($mat-deep-purple, A700);
+    $ciudad-bici-warn: mat-palette($mat-red, A700);
+    $ciudad-bici-text: mat-palette($mat-grey, 900);
+    $ciudad-bici-theme: mat-light-theme($ciudad-bici-primary, $ciudad-bici-accent, $ciudad-bici-warn);
+    @include angular-material-theme($ciudad-bici-theme);
+}
+
+.bici-trip-theme {
+    $bici-trip-primary: mat-palette($mat-green, 700);
+    $bici-trip-accent: mat-palette($mat-green, 900);
+    $bici-trip-warn: mat-palette($mat-red, A700);
+    $bici-trip-text: mat-palette($mat-grey, 900);
+    $bici-trip-theme: mat-light-theme($bici-trip-primary, $bici-trip-accent, $bici-trip-warn);
+    @include angular-material-theme($bici-trip-theme);
+}
