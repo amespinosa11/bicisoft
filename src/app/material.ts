@@ -8,7 +8,6 @@ import {
   MatInputModule
 } from '@angular/material';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -18,8 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatListModule,
     MatIconModule,
     MatCardModule,
-    MatInputModule,
-    BrowserAnimationsModule
+    MatInputModule
   ],
   exports: [
     MatButtonModule,
@@ -28,8 +26,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatListModule,
     MatIconModule,
     MatCardModule,
-    MatInputModule,
-    BrowserAnimationsModule
+    MatInputModule
   ],
   providers: []
 })

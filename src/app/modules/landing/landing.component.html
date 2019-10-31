@@ -20,11 +20,17 @@
         <mat-sidenav #sidenav position="end">
             <mat-nav-list>
                 <!-- <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a> -->
-                <a href="#" mat-list-item>Tu aficionado</a>
-                <a href="#" mat-list-item>Ciudad Bici</a>
-                <a href="#" mat-list-item>BiciTrip</a>
+                <a [routerLink]="['/login/tuaficionado']" mat-list-item>Tu aficionado</a>
+                <a [routerLink]="['/login/ciudadbici']" mat-list-item>Ciudad Bici</a>
+                <a [routerLink]="['/login/bicitrip']" mat-list-item>BiciTrip</a>
             </mat-nav-list>
         </mat-sidenav>
-        <mat-sidenav-content fxFlexFill></mat-sidenav-content>
+        <mat-sidenav-content class="landing-content" fxFlexFill>
+            <img class="landing-img" [src]="imagenActual" alt="cycling">
+            <div class="landing-descr">
+                <div class="title">Diferentes soluciones en un solo lugar!</div>
+                <div>La nueva forma de transporte</div>
+            </div>
+        </mat-sidenav-content>
     </mat-sidenav-container>
 </div>

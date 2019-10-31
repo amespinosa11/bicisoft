@@ -8,15 +8,17 @@ import { MaterialModule } from './material';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { LandingComponent } from './modules/landing/landing.component';
 import { LoginComponent } from './modules/login/login.component';
+import { LayoutModule } from './modules/layout/layout.module';
 
 @NgModule({
   declarations: [AppComponent, LandingComponent, LoginComponent],
   imports: [
-    BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule,
     MaterialModule,
-    FlexLayoutModule
+    LayoutModule,
+    FlexLayoutModule,
+    BrowserAnimationsModule,
+    BrowserModule
   ],
   providers: [MaterialModule],
   bootstrap: [AppComponent]
