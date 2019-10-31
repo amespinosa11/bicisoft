@@ -20,8 +20,8 @@ $default-app-theme: mat-light-theme($default-app-primary, $default-app-accent, $
 // that you are using.
 @include angular-material-theme($default-app-theme);
 .tu-aficionado-theme {
-    $tu-aficionado-primary: mat-palette($mat-blue, A400);
-    $tu-aficionado-accent: mat-palette($mat-blue, A700);
+    $tu-aficionado-primary: mat-palette($mat-deep-orange, A400);
+    $tu-aficionado-accent: mat-palette($mat-deep-orange, A700);
     $tu-aficionado-warn: mat-palette($mat-red, A700);
     $tu-aficionado-text: mat-palette($mat-grey, 900);
     $tu-aficionado-theme: mat-light-theme($tu-aficionado-primary, $tu-aficionado-accent, $tu-aficionado-warn);
@@ -29,8 +29,8 @@ $default-app-theme: mat-light-theme($default-app-primary, $default-app-accent, $
 }
 
 .ciudad-bici-theme {
-    $ciudad-bici-primary: mat-palette($mat-deep-purple, A400);
-    $ciudad-bici-accent: mat-palette($mat-deep-purple, A700);
+    $ciudad-bici-primary: mat-palette($mat-blue, A400);
+    $ciudad-bici-accent: mat-palette($mat-blue, A700);
     $ciudad-bici-warn: mat-palette($mat-red, A700);
     $ciudad-bici-text: mat-palette($mat-grey, 900);
     $ciudad-bici-theme: mat-light-theme($ciudad-bici-primary, $ciudad-bici-accent, $ciudad-bici-warn);
