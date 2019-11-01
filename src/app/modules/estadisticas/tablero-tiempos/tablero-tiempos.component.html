@@ -1,1 +1,87 @@
-<p>tablero-tiempos works!</p>
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <h1>
+            Buscar Ruta
+          </h1>
+        </section>
+      
+        <!-- Main content -->
+        <section class="content">
+          <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+              <!-- general form elements -->
+              <div class="box box-primary">
+                <!-- form start -->
+                <form role="form" [formGroup]="buscarRutaForm">
+                  <div class="box">
+                      <div class="box-header with-border">
+                        <h3 class="box-title">Complete los filtros de búsqueda</h3>
+                      </div>
+                      <!-- /.box-header -->
+                      <div class="box-body">
+      
+                        <div class="form-group">
+                          <label for="nombreLugar">Nombre de lugar</label>
+                          <input type="text" class="form-control" placeholder="nombreLugar" formControlName="nombreLugar">
+                        </div>
+                        <div class="form-group">
+                          <label for="nombreRuta">Nombre de la ruta</label>
+                          <input type="text" class="form-control" placeholder="nombreRuta" formControlName="nombreRuta">
+                        </div>
+                    </div>
+                      <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+      
+                  <div class="box-footer">
+                    <button type="submit" (click)="buscarRuta()" class="btn btn-default">Buscar</button>
+                  </div>
+                  <!-- /.box-footer -->
+                </form>
+      
+                <div class="box">
+                  <div class="box-header">
+                    <h3 class="box-title">Resultados de la búsqueda</h3>
+                  </div>
+                  <div class="box-body">
+                    <div *ngIf="rutas.length !== 0">
+                      <table class="table" >
+                        <thead>
+                          <tr>
+                            <th scope="col">Nombre de la ruta</th>
+                            <th scope="col">Punto inicial</th>
+                            <th scope="col">Punto final</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let ruta of rutas">
+                            <td>{{ruta.nombre}}</td>
+                            <td>{{ruta.direccionInicio}}</td>
+                            <td>{{ruta.direccionFin}}</td>
+                            <td>
+                              <button type="button" class="btn btn-primary" (click)="mostrarTabla=true">
+                                Ver detalle
+                              </button>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <span *ngIf="rutas.length === 0">Sin Resultados</span>
+                  </div>
+                </div>
+              </div>
+              <!-- /.box -->
+            </div>
+            <!--/.col (left) -->
+            <!-- /.row -->
+          </div>
+          <!-- /.row -->
+        </section>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+      
