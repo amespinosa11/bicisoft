@@ -14,6 +14,13 @@ const routes: Routes = [
           import(`../geolocalizacion/geolocalizacion.module`).then(
             m => m.GeolocalizacionModule
           )
+      },
+      {
+        path: 'estadisticas',
+        loadChildren: () =>
+          import(`../estadisticas/estadisticas.module`).then(
+            m => m.EstadisticasModule
+          )
       }
     ]
   }

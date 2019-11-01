@@ -5,6 +5,7 @@ import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout/layout.component';
 import { MaterialModule } from 'src/app/material';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [LayoutComponent],
@@ -12,7 +13,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule,
     LayoutRoutingModule,
     FlexLayoutModule,
-    MaterialModule
+    MaterialModule,
+    MatMenuModule
   ],
   providers: [MaterialModule]
 })
