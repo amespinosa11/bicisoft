@@ -10,6 +10,7 @@
     min-height: 30%;
     flex-direction: column;
     padding: 1.5%;
+    width: 24%;
 }
 
 .landing-content {
@@ -28,5 +29,8 @@
     .landing-img {
         width: 100%;
         height: auto;
+    }
+    .landing-descr {
+        width: 100%;
     }
 }
