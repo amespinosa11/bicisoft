@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RoleService } from '../../../services/role/role.service';
 
 @Component({
   selector: 'app-layout',
@@ -8,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 export class LayoutComponent implements OnInit {
   tipo: number;
 
-  constructor() {}
+  constructor(private roleService: RoleService) {}
 
   ngOnInit() {
-    this.tipo = 1;
+    this.tipo = this.roleService.getRole();
   }
 }

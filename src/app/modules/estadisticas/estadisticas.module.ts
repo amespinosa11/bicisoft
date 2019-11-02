@@ -7,14 +7,17 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InventarioBicicletasComponent } from './inventario-bicicletas/inventario-bicicletas.component';
 import { DatosUsoBicicletasComponent } from './datos-uso-bicicletas/datos-uso-bicicletas.component';
 
-
 @NgModule({
-  declarations: [TableroTiemposComponent, InventarioBicicletasComponent, DatosUsoBicicletasComponent],
+  declarations: [
+    TableroTiemposComponent,
+    InventarioBicicletasComponent,
+    DatosUsoBicicletasComponent
+  ],
   imports: [
     CommonModule,
-    EstadisticasRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    EstadisticasRoutingModule
   ]
 })
-export class EstadisticasModule { }
+export class EstadisticasModule {}

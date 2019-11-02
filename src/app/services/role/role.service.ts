@@ -11,4 +11,19 @@ export class RoleService {
     const tipo = this.router.url.split('/')[2];
     return tipo;
   }
+
+  setRole(producto: string) {
+    let num = 1;
+    if (producto === 'ciudadbici') {
+      num = 2;
+    } else if (producto === 'bicitrip') {
+      num = 3;
+    }
+    sessionStorage.setItem('r', num.toString());
+    this.router.navigateByUrl('/bicisoft/geolocalizacion');
+  }
+
+  getRole() {
+    return JSON.parse(sessionStorage.getItem('r'));
+  }
 }

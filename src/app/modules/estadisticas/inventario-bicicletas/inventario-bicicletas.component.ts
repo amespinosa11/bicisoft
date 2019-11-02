@@ -7,12 +7,16 @@ import { InventarioService } from '../../../services/inventario/inventario.servi
   styleUrls: ['./inventario-bicicletas.component.scss']
 })
 export class InventarioBicicletasComponent implements OnInit {
-
-  inventarios: { nombre: string, identificacion: number, telefono: number, modelo: string, descripcion: string; }[] = [];
-  
-  constructor(private inventarioService: InventarioService) { }
+  inventarios: {
+    nombre: string;
+    identificacion: number;
+    telefono: number;
+    modelo: string;
+    descripcion: string;
+  }[] = [];
+  constructor(private inventarioService: InventarioService) {}
 
   ngOnInit() {
-    this.inventarios = this.inventarioService.obtenerInventarios()
+    this.inventarios = this.inventarioService.obtenerInventarios();
   }
 }
