@@ -13,8 +13,8 @@
                 <button mat-button [matMenuTriggerFor]="estadisticas">Estadísticas</button>
                 <mat-menu #estadisticas="matMenu">
                     <button mat-menu-item [routerLink]="['/bicisoft/estadisticas/tablero-tiempos']">Tablero de mejores tiempos</button>
-                    <button mat-menu-item>Registro en inventario</button>
-                    <button mat-menu-item>Registro de uso</button>
+                    <button mat-menu-item [routerLink]="['/bicisoft/estadisticas/inventario-bicicletas']">Inventario de bicicletas</button>
+                    <button mat-menu-item [routerLink]="['/bicisoft/estadisticas/uso-bicicletas']">Datos de uso de bicicleta</button>
                 </mat-menu>
                 <button mat-button>Pagos</button>                
             </div>
