@@ -25,11 +25,11 @@
       
                         <div class="form-group">
                           <label for="nombreLugar">Nombre de lugar</label>
-                          <input type="text" class="form-control" placeholder="nombreLugar" formControlName="nombreLugar">
+                          <input type="text" class="form-control" formControlName="nombreLugar">
                         </div>
                         <div class="form-group">
                           <label for="nombreRuta">Nombre de la ruta</label>
-                          <input type="text" class="form-control" placeholder="nombreRuta" formControlName="nombreRuta">
+                          <input type="text" class="form-control" formControlName="nombreRuta">
                         </div>
                     </div>
                       <!-- /.box-body -->
@@ -62,7 +62,7 @@
                             <td>{{ruta.direccionInicio}}</td>
                             <td>{{ruta.direccionFin}}</td>
                             <td>
-                              <button type="button" class="btn btn-primary" (click)="mostrarTabla=true">
+                              <button type="button" class="btn btn-primary" (click)="buscarTiemposPorRuta(ruta.id)">
                                 Ver detalle
                               </button>
                             </td>
@@ -73,6 +73,34 @@
                     <span *ngIf="rutas.length === 0">Sin Resultados</span>
                   </div>
                 </div>
+
+                <div class="box" *ngIf="mostrarTabla">
+                  <div class="box-header">
+                    <h3 class="box-title">Mejores tiempos</h3>
+                  </div>
+                  <div class="box-body">
+                    <div *ngIf="usuarios.length !== 0">
+                      <table class="table" >
+                        <thead>
+                          <tr>
+                            <th scope="col">Nombre de usuario</th>
+                            <th scope="col">Tiempo gastado(min)</th>
+                            <th scope="col">Número de intentos</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let usuario of usuarios">
+                            <td>{{usuario.nombre}}</td>
+                            <td>{{usuario.tiempo}}</td>
+                            <td>{{usuario.intentos}}</td>                            
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                    <span *ngIf="usuarios.length === 0">No existen tiempos registrados para esta ruta.</span>
+                  </div>
+                </div>
+
               </div>
               <!-- /.box -->
             </div>

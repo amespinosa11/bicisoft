@@ -12,6 +12,7 @@ export class TableroTiemposComponent implements OnInit {
   public buscarRutaForm: FormGroup;
 
   rutas: { id: string, nombre: string, direccionInicio: string, direccionFin: string; }[] = [];
+  usuarios: { id: string, nombre: string, tiempo: number, intentos: number; }[] = [];
   mostrarTabla: boolean = false;
 
   constructor(private rutaService: RutaService) { }
@@ -23,14 +24,13 @@ export class TableroTiemposComponent implements OnInit {
     });
   }
 
-  buscarRuta() {
-    this.rutas = [{
-      id: '1',
-      nombre: 'mi ruta',
-      direccionInicio: 'dir 1',
-      direccionFin: 'dir 2',
-    },];
-    this.rutas = this.rutaService.buscarRutas(this.buscarRutaForm.get('nombreLugar').value, this.buscarRutaForm.get('nombreRuta').value)      
+  buscarRuta() {    
+    this.rutas = this.rutaService.buscarRutas(this.buscarRutaForm.get('nombreLugar').value, this.buscarRutaForm.get('nombreRuta').value) 
+  }
+
+  buscarTiemposPorRuta(idRuta) {
+    this.mostrarTabla = true;
+    this.usuarios = this.rutaService.buscarTiemposPorRuta(idRuta) 
   }
 
 }
