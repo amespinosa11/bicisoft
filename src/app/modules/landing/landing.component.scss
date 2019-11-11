@@ -25,6 +25,10 @@
     font-weight: 600;
 }
 
+.sidenav-container {
+  z-index: -1 !important;
+}
+
 @media (max-width: 1024px) {
     .landing-img {
         width: 100%;
