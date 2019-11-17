@@ -60,7 +60,7 @@
     },
     "husky": {
         "hooks": {
-            "pre-push": "ng lint && ng build --prod --base-href \"https://amespinosa11.github.io/bicisoft/\" && npx ngh--dir=dist/bicisoft"
+            "pre-push": "ng build --prod --base-href \"https://amespinosa11.github.io/bicisoft/\" && npx ngh--dir=dist/bicisoft"
         }
     }
 }
