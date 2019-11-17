@@ -6,6 +6,8 @@ import { LayoutModule } from './modules/layout/layout.module';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
+  { path: 'landing/home', component: LandingComponent },
+  { path: 'landing/acerca', component: LandingComponent }, //cambiar
   { path: 'login/tuaficionado', component: LoginComponent },
   { path: 'login/ciudadbici', component: LoginComponent },
   { path: 'login/bicitrip', component: LoginComponent },
