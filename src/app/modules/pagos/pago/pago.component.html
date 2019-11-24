@@ -1,0 +1,66 @@
+<div class="pago">
+    <form [formGroup]="pagoForm" (ngSubmit)="pagar()">
+        <mat-card class="pago-container">
+            <div class="valor-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>Ingrese el valor a pagar*</mat-label>
+                    <input matInput placeholder="" formControlName="valor" />
+                    <mat-icon matSuffix>attach_money</mat-icon>
+                    <mat-error *ngIf="pagoForm.get('valor').errors?.required">{{ mensajeErrorObligatorio }}
+                    </mat-error>
+                    <mat-error *ngIf="pagoForm.get('valor').errors?.pattern">Solo se deben incluir números</mat-error>
+                </mat-form-field>
+                <button mat-stroked-button color="primary" *ngIf="!esEstudiante" (click)="esEstudiante = true">
+          Estudiante
+        </button>
+                <button mat-flat-button color="primary" *ngIf="esEstudiante" (click)="esEstudiante = false">
+          Estudiante
+        </button>
+                <mat-form-field appearance="outline" *ngIf="esEstudiante">
+                    <mat-label>Código</mat-label>
+                    <input matInput placeholder="" formControlName="codigo" />
+                </mat-form-field>
+            </div>
+            <div class="tarjeta-container">
+                <mat-form-field appearance="outline">
+                    <mat-label>Nombre en la tarjeta*</mat-label>
+                    <input matInput placeholder="" formControlName="nombre" />
+                    <mat-error *ngIf="pagoForm.get('nombre').errors?.required">{{ mensajeErrorObligatorio }}
+                    </mat-error>
+                    <mat-error *ngIf="pagoForm.get('nombre').errors?.pattern">Solo se deben incluir letras</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Número de la tarjeta*</mat-label>
+                    <input matInput placeholder="" formControlName="numeroTarjeta" />
+                    <mat-error *ngIf="pagoForm.get('numeroTarjeta').errors?.required">{{ mensajeErrorObligatorio }}
+                    </mat-error>
+                    <mat-error *ngIf="pagoForm.get('numeroTarjeta').errors?.pattern">Solo se deben incluir números</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>CVV*</mat-label>
+                    <input matInput placeholder="" formControlName="cvv" type="password" />
+                    <mat-error *ngIf="pagoForm.get('cvv').errors?.required">{{ mensajeErrorObligatorio }}
+                    </mat-error>
+                    <mat-error *ngIf="pagoForm.get('cvv').errors?.pattern">Solo se deben incluir números</mat-error>
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Fecha de expiración(MM-YY)*</mat-label>
+                    <input matInput placeholder="" formControlName="fechaExpiracion" />
+                    <mat-error *ngIf="pagoForm.get('fechaExpiracion').errors?.required">{{ mensajeErrorObligatorio }}
+                    </mat-error>
+                    <mat-error *ngIf="pagoForm.get('fechaExpiracion').errors?.pattern">El formato es (MM-YY)</mat-error>
+                </mat-form-field>
+
+                <button type="submit" mat-flat-button color="primary" class="pago-btn" *ngIf="pagoForm.valid">
+          Pagar
+        </button>
+                <button type="submit" mat-flat-button color="primary" class="pago-btn" *ngIf="pagoForm.invalid" disabled>
+          Pagar
+        </button>
+            </div>
+        </mat-card>
+    </form>
+</div>

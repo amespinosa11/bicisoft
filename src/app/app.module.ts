@@ -9,6 +9,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { LandingComponent } from './modules/landing/landing.component';
 import { LoginComponent } from './modules/login/login.component';
 import { LayoutModule } from './modules/layout/layout.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [AppComponent, LandingComponent, LoginComponent],
@@ -18,6 +19,8 @@ import { LayoutModule } from './modules/layout/layout.module';
     LayoutModule,
     FlexLayoutModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     BrowserModule
   ],
   providers: [MaterialModule],

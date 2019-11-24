@@ -7,10 +7,6 @@
     height: 100%;
 }
 
-.toolbar-container{
-    height: 15%;
-}
-
 .landing-img {
     width: 65%;
     height: auto;
@@ -39,7 +35,7 @@
 }
 
 .sidenav-container {
-  z-index: -1 !important;
+  z-index: 100 !important;
 }
 
 @media (max-width: 1024px) {

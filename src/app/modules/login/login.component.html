@@ -1,26 +1,33 @@
 <div class="login-container" [ngClass]="{
-    'tu-aficionado-theme':tipo === 'tuaficionado',
-    'ciudad-bici-theme':tipo === 'ciudadbici',
-    'bici-trip-theme':tipo === 'bicitrip'
-    }">
+    'tu-aficionado-theme': tipo === 'tuaficionado',
+    'ciudad-bici-theme': tipo === 'ciudadbici',
+    'bici-trip-theme': tipo === 'bicitrip'
+  }">
     <div class="background-header" [ngClass]="{
-    'tuaficionado':tipo === 'tuaficionado',
-    'ciudadbici':tipo === 'ciudadbici',
-    'bicitrip':tipo === 'bicitrip'
+      tuaficionado: tipo === 'tuaficionado',
+      ciudadbici: tipo === 'ciudadbici',
+      bicitrip: tipo === 'bicitrip'
     }"></div>
     <mat-card class="login-card">
-        <h3 class="title">{{tipo }}</h3>
-        <form class="login-form">
+        <h3 class="title">{{ tipo }}</h3>
+        <form class="login-form" [formGroup]="loginForm" (ngSubmit)="iniciarSesion()">
             <mat-form-field class="example-full-width">
-                <input matInput placeholder="Usuario">
+                <input matInput placeholder="Usuario" formControlName="user" />
+                <mat-error *ngIf="loginForm.get('user').invalid">{{ mensajeErrorObligatorio }}
+                </mat-error>
             </mat-form-field>
             <mat-form-field class="example-full-width">
-                <input matInput placeholder="Contraseña" type="password">
+                <input matInput placeholder="Contraseña" type="password" formControlName="password" />
+                <mat-error *ngIf="loginForm.get('password').invalid">{{ mensajeErrorObligatorio }}
+                </mat-error>
+                <mat-error *ngIf="invalidUser">El usuario y la contraseña no son validos
+                </mat-error>
             </mat-form-field>
+            <button mat-raised-button color="primary" class="full-width" type="submit">
+        Iniciar Sesión
+      </button>
         </form>
-        <div>
-            <button mat-raised-button color="primary" class="full-width" (click)="iniciarSesion()">Iniciar Sesión</button>
-        </div>
+        <div></div>
     </mat-card>
     <div class="background-footer"></div>
 </div>

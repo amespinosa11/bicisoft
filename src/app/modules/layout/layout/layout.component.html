@@ -18,7 +18,7 @@
                     <button mat-menu-item [routerLink]="['/bicisoft/estadisticas/inventario-bicicletas']">Inventario de bicicletas</button>
                     <button mat-menu-item [routerLink]="['/bicisoft/estadisticas/uso-bicicletas']" *ngIf="tipo === 2">Datos de uso de bicicleta</button>
                 </mat-menu>
-                <button mat-button *ngIf="tipo === 3">Pagos</button>
+                <button mat-button [routerLink]="['/bicisoft/pagos']" *ngIf="tipo === 3">Pagos</button>
             </div>
 
             <button mat-icon-button (click)="sidenav.toggle()" fxShow="true" fxHide.gt-sm>
@@ -33,7 +33,7 @@
                 <!-- <a (click)="sidenav.toggle()" href="" mat-list-item>Close</a> -->
                 <a [routerLink]="['/bicisoft/geolocalizacion']" mat-list-item>Geolocalización</a>
                 <a [routerLink]="['/']" mat-list-item>Estadísticas</a>
-                <a [routerLink]="['/']" mat-list-item>Pagos</a>
+                <a [routerLink]="['/bicisoft/pagos']" mat-list-item>Pagos</a>
             </mat-nav-list>
         </mat-sidenav>
         <mat-sidenav-content fxFlexFill>

@@ -5,9 +5,10 @@ import {
   MatListModule,
   MatIconModule,
   MatCardModule,
-  MatInputModule
+  MatInputModule,
+  MatFormFieldModule
 } from '@angular/material';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatMenuModule } from '@angular/material/menu';
 import { NgModule } from '@angular/core';
 
 @NgModule({
@@ -19,7 +20,8 @@ import { NgModule } from '@angular/core';
     MatIconModule,
     MatCardModule,
     MatInputModule,
-    MatMenuModule
+    MatMenuModule,
+    MatFormFieldModule
   ],
   exports: [
     MatButtonModule,
@@ -29,7 +31,8 @@ import { NgModule } from '@angular/core';
     MatIconModule,
     MatCardModule,
     MatInputModule,
-    MatMenuModule
+    MatMenuModule,
+    MatFormFieldModule
   ],
   providers: []
 })

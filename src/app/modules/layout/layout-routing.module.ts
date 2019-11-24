@@ -21,6 +21,13 @@ const routes: Routes = [
           import(`../estadisticas/estadisticas.module`).then(
             m => m.EstadisticasModule
           )
+      },
+      {
+        path: 'pagos',
+        loadChildren: () =>
+          import(`../pagos/pagos.module`).then(
+            m => m.PagosModule
+          )
       }
     ]
   }
