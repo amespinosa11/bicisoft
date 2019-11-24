@@ -11,23 +11,21 @@ const routes: Routes = [
       {
         path: 'geolocalizacion',
         loadChildren: () =>
-          import(`../geolocalizacion/geolocalizacion.module`).then(
+          import('../geolocalizacion/geolocalizacion.module').then(
             m => m.GeolocalizacionModule
           )
       },
       {
         path: 'estadisticas',
         loadChildren: () =>
-          import(`../estadisticas/estadisticas.module`).then(
+          import('../estadisticas/estadisticas.module').then(
             m => m.EstadisticasModule
           )
       },
       {
         path: 'pagos',
         loadChildren: () =>
-          import(`../pagos/pagos.module`).then(
-            m => m.PagosModule
-          )
+          import('../pagos/pagos.module').then(m => m.PagosModule)
       }
     ]
   }

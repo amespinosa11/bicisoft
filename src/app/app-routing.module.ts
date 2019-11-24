@@ -11,7 +11,11 @@ const routes: Routes = [
   { path: 'login/tuaficionado', component: LoginComponent },
   { path: 'login/ciudadbici', component: LoginComponent },
   { path: 'login/bicitrip', component: LoginComponent },
-  { path: 'bicisoft', loadChildren: () => import(`./modules/layout/layout.module`).then(m => m.LayoutModule) },
+  {
+    path: 'bicisoft',
+    loadChildren: () =>
+      import('./modules/layout/layout.module').then(m => m.LayoutModule)
+  },
   { path: '**', pathMatch: 'full', redirectTo: '' }
 ];
 
