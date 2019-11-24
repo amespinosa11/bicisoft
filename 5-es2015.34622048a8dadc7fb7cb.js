@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[5],{"22TB":function(s,n,c){"use strict";c.r(n),c.d(n,"EstadisticasModule",(function(){return i}));class i{}}}]);
