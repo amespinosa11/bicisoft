@@ -7,7 +7,9 @@
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
-        "e2e": "ng e2e"
+        "e2e": "ng e2e",
+        "build1": "ng build --prod --base-href \"https://amespinosa11.github.io/bicisoft/\"",
+        "build2": "npx ngh --dir=dist/bicisoft"
     },
     "private": true,
     "dependencies": {
