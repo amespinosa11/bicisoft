@@ -4,12 +4,10 @@
     "scripts": {
         "ng": "ng",
         "start": "ng serve",
-        "build": "ng build",
+        "build": "ng build --prod --base-href \"https://amespinosa11.github.io/bicisoft/\" && npx ngh --dir=dist/bicisoft",
         "test": "ng test",
         "lint": "ng lint",
-        "e2e": "ng e2e",
-        "build1": "ng build --prod --base-href \"https://amespinosa11.github.io/bicisoft/\"",
-        "build2": "npx ngh --dir=dist/bicisoft"
+        "e2e": "ng e2e"
     },
     "private": true,
     "dependencies": {
